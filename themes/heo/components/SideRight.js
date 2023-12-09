@@ -3,7 +3,6 @@ import TagGroups from './TagGroups'
 import Catalog from './Catalog'
 import { InfoCard } from './InfoCard'
 import dynamic from 'next/dynamic'
-import Live2D from '@/components/Live2D'
 import { AnalyticsCard } from './AnalyticsCard'
 import TouchMeCard from './TouchMeCard'
 import LatestPostsGroupMini from './LatestPostsGroupMini'
@@ -55,7 +54,6 @@ export default function SideRight(props) {
                 {rightAreaSlot}
 
                 <FaceBookPage />
-                <Live2D />
 
                 {/* 标签和成绩 */}
                 <Card className={'bg-white dark:bg-[#1e1e1e] dark:text-white'}>

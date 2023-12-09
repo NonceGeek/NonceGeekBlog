@@ -89,9 +89,6 @@ function Banner(props) {
         </div>
       </div>
 
-      {/* 斜向滚动的图标 */}
-      <TagsGroupBar />
-
       {/* 遮罩 */}
       <div
         id="banner-cover"
@@ -106,53 +103,6 @@ function Banner(props) {
             <ArrowSmallRight className={'w-24 h-24 stroke-2'} />
           </div>
         </div>
-      </div>
-    </div>
-  )
-}
-
-/**
- * 图标滚动标签组
- * 英雄区左上角banner条中斜向滚动的图标
- */
-function TagsGroupBar() {
-  const groupIcons = siteConfig('HEO_GROUP_ICONS', null, CONFIG).concat(siteConfig('HEO_GROUP_ICONS', null, CONFIG))
-
-  return (
-    <div className="tags-group-all flex -rotate-[30deg] h-full">
-      <div className="tags-group-wrapper flex flex-nowrap absolute top-16">
-        {groupIcons?.map((g, index) => {
-          return (
-            <div key={index} className="tags-group-icon-pair ml-6 select-none">
-              <div
-                style={{ background: g.color_1 }}
-                className={
-                  'tags-group-icon w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
-                }
-              >
-                <LazyImage
-                  priority={true}
-                  src={g.img_1}
-                  title={g.title_1}
-                  className="w-2/3 hidden xl:block"
-                />
-              </div>
-              <div
-                style={{ background: g.color_2 }}
-                className={
-                  'tags-group-icon  mt-5 w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
-                }
-              >
-                <LazyImage
-                  priority={true}
-                  src={g.img_2}
-                  title={g.title_2}
-                  className="w-2/3 hidden xl:block"
-                />
-              </div>
-            </div>
-          )
-        })}
       </div>
     </div>
   )
